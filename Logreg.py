@@ -12,7 +12,7 @@ data = pd.read_csv('PROJECTexample.csv')
 df1 = data.copy()
 df1.drop(['Unnamed: 0'], axis = 1,inplace=True)
 
-X = pd.DataFrame(df1.iloc[:,:3])
+X = df1.drop(["Status_ACTIVE")]
 y= df1["Status_ACTIVE"]
 
 
