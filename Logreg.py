@@ -7,7 +7,7 @@ from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 
 
-data = pd.read_csv('PROJECT2.csv')
+data = pd.read_csv('PROJECTexample.csv')
 
 df1 = data.copy()
 df1.drop(['Unnamed: 0'], axis = 1,inplace=True)
