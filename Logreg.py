@@ -7,7 +7,7 @@ from sklearn import metrics
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import LabelEncoder
 
-data = pd.read_csv(r'C:\Users\asudh\Downloads\PROJECT2.csv')
+data = pd.read_csv('PROJECT2.csv')
 
 df1 = data.copy()
 df1.drop(['Unnamed: 0'], axis = 1,inplace=True)
