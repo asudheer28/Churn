@@ -39,10 +39,9 @@ print(classification_report(y_test, y_pred))
 import pickle
 
 pickle.dump(logreg, open("logreg.pkl", "wb"))
+logreg = pickle.load(open('logreg.pkl','rb'))
 
-model = pickle.load(open("logreg.pkl", "rb"))
-
-print(model.predict([[25,50000,12]]))
+print(logreg.predict([[25,50000,12]]))
 
 
 
