@@ -6,11 +6,11 @@
 
         <h1>  PREDICTION :  </h1>
     
-    {%if data == 0%}
+    {%if data == 1%}
     <h1>You're Active</h1>
 
-    {%elif data==1 %}
-    <h1>You're Non Churn</h1>
+    {%elif data==0%}
+    <h1>You're Churn</h1>
 
 
     {% endif %}
