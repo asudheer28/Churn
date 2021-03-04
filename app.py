@@ -4,25 +4,20 @@ Created on Sat Jun  8 17:06:01 2019
 
 @author: prithvi
 """
+
+from flask import Flask, request , render_template
 import numpy as np
-from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('logreg.pkl', 'rb'))
 
 @app.route('/')
-def home():
+def man():
     return render_template('home.html')
 
-@app.route('/predict',methods=['POST'])
-def predict():
-    '''
-    For rendering results on HTML GUI
-    '''
-
-    @app.route('/predict', methods=['POST'])
-    def home():
+@app.route('/predict', methods=['POST'])
+def home():
         data1 = request.form['a']
         data2 = request.form['b']
         data3 = request.form['c']
